@@ -50,5 +50,10 @@ $(document).ready(function(){
         }, 1000);
     })();
 
+    function add(x,y){
+        return x+y;
+    }
+    var plus = add;
+    document.querySelector('#resultFunction').value = add(2,9);
     
 });
