@@ -28,9 +28,14 @@ $(document).ready(function(){
     document.querySelector('#nom').value = autrePersonne.prenom;
     document.querySelector('#prenom').value = homme.prenom;
     //affiche une alert lors d'un click sur le bouton
-    document.querySelector('#btnAffiche').onclick= function(){
+
+    /*document.querySelector('#btnAffiche').onclick= function(){
         alert(homme.nom);
-    };
+    };*/
+    // autre façon d'écrire le code
+    document.querySelector('#btnAffiche').addEventListener('click', function(){
+        alert(homme.nom)}, 'false'
+    );
 
     //fonction anonyme auto-exécutable
     (function(){
@@ -40,7 +45,7 @@ $(document).ready(function(){
         setInterval(function(){
             i++;
              (function(texte){
-                 document.querySelector('#horloge').value = texte;}
+                 document.querySelector('#horloge').value = texte;}//affichage de l'horloge dans input type text
                  ("je compte: " + i));//fin partie horloge
         }, 1000);
     })();
