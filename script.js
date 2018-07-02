@@ -35,5 +35,15 @@ $(document).ready(function(){
     //fonction anonyme auto-exécutable
     (function(){
         alert(encorePersonne.prenom);
+        //ajout de l'horloge
+        var i = 0;
+        setInterval(function(){
+            i++;
+             (function(texte){
+                 document.getElementById('horloge').value = texte;}
+                 ("je compte: " + i));//fin partie horloge
+        }, 1000);
     })();
+
+    
 });
