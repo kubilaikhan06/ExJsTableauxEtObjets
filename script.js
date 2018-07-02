@@ -61,7 +61,7 @@ $(document).ready(function(){
     var Mathematiq = {};
     Mathematiq.sin = function(n){
         n = n || 0;
-        return 0;
+        return 0; 
     }
     
 });
