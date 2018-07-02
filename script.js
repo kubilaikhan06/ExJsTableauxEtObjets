@@ -23,12 +23,12 @@ $(document).ready(function(){
     homme.nom = 'Milord';
     homme.prenom = 'Albert';
     console.log(homme.nom);
-    document.getElementById('div1').innerHTML = encorePersonne.nom;
-    document.getElementById('para1').innerHTML = homme.prenom;
-    document.getElementById('nom').value = autrePersonne.prenom;
-    document.getElementById('prenom').value = homme.prenom;
+    document.querySelector('#div1').innerHTML = encorePersonne.nom;
+    document.querySelector('#para1').innerHTML = homme.prenom;
+    document.querySelector('#nom').value = autrePersonne.prenom;
+    document.querySelector('#prenom').value = homme.prenom;
     //affiche une alert lors d'un click sur le bouton
-    document.getElementById('btnAffiche').onclick= function(){
+    document.querySelector('#btnAffiche').onclick= function(){
         alert(homme.nom);
     };
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
         setInterval(function(){
             i++;
              (function(texte){
-                 document.getElementById('horloge').value = texte;}
+                 document.querySelector('#horloge').value = texte;}
                  ("je compte: " + i));//fin partie horloge
         }, 1000);
     })();
