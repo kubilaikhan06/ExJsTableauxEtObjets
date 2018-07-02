@@ -51,9 +51,17 @@ $(document).ready(function(){
     })();
 
     function add(x,y){
+        x = x || 0;//permet d'affeceter par défaut des valeurs aux paramètres
+        y = y || 0;// on peut ainsi appeler la fonction sans mettre de paramètres ou juste un seul paramètre
         return x+y;
     }
     var plus = add;
-    document.querySelector('#resultFunction').value = add(2,9);
+    document.querySelector('#resultFunction').value = add();// retourne 0 si pas d'argument dans add, retourne l'argument s'il n'y a qu'un argument dans add
+
+    var Mathematiq = {};
+    Mathematiq.sin = function(n){
+        n = n || 0;
+        return 0;
+    }
     
 });
